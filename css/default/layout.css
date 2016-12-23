@@ -1,0 +1,218 @@
+
+html {
+	width:100%;
+	height:100%;
+	margin:0px;
+}
+
+body {
+	width:100%;
+	height:100%;
+	margin:0px;
+	background-color:transparent;
+	font-family:Arial;
+	color:#FFF;
+}
+
+#body-main {
+	background:rgba(0,0,0,1.0); background-attachment:fixed;
+}
+#backdrop { position:absolute;
+	top:0px; left:0px;
+	width:100%; height:100%;
+	background-size:cover; background-position:center;
+	display:none;
+}
+
+@font-face {
+	font-family:FedStarFleet;
+	src: url("Federation_Starfleet.TTF") format("truetype");
+}
+
+/*============================================================================*/
+
+.centerCenter {
+	display: flex; justify-content: center; align-items: center;
+}
+.centerCenterColumn {
+	display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+
+/*============================================================================*/
+
+.test { background:url(test.png); }
+
+div {
+	/*overflow:hidden;*/
+}
+
+#rowA { position:absolute;
+	width:100%;
+	top:0px;
+	clear:both;
+}
+#rowB { position:absolute;
+	width:100%;
+	top:100px;
+	clear:both;
+}
+#rowC { position:absolute;
+	width:100%;
+	top:160px; bottom:90px;
+	clear:both;
+}
+#rowD { position:absolute;
+	width:100%;
+	bottom:50px;
+	clear:both;
+}
+#rowE { position:absolute;
+	width:100%;
+	bottom:0px;
+	clear:both;
+}
+
+.rowA, #rowAcolA, #rowAcolB, #rowAcolC {
+	height:100px;
+}
+.rowB, #rowBcolA, #rowBcolB, #rowBcolC {
+	height:60px;
+}
+.rowC {
+	/* SET BY JQUERY */
+}
+.rowD, #rowDcolA, #rowDcolB, #rowDcolC {
+	height:40px;
+}
+.rowE, #rowEcolA, #rowEcolB, #rowEcolC {
+	height:50px;
+}
+
+.colA { position:absolute;
+	width:200px;
+	top:0px; left:0px;
+}
+.colB { position:absolute;
+	top:0px; right:200px; left:200px;
+}
+.colC { position:absolute;
+	width:200px;
+	right:0px;
+}
+
+/*====================================================================*/
+
+#rowAcolA {
+	background-image:url(rowAcolA.png);
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+}
+#rowAcolB {
+	/**/
+}
+#rowAcolC {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+}
+
+#rowBcolA {
+	background-image:url(rowBcolA.png);
+}
+#rowBcolB {
+	background-image:url(rowBcolB.png);
+}
+#rowBcolC {
+	background-image:url(rowBcolC.png);
+}
+
+#rowCcolA {
+	background-image:url(rowCcolA.png);
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+}
+#rowCcolB {
+	height:100%;
+	overflow:auto;
+}
+#rowCcolC {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+}
+
+#rowDcolA {
+	background-image:url(rowDcolA.png);
+}
+#rowDcolB {
+	background-image:url(rowDcolB.png);
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+}
+#rowDcolC {
+	background-image:url(rowDcolC.png);
+}
+
+#rowEcolA {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+}
+#rowEcolB {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+}
+#rowEcolC {
+	background-image:url(rowEcolC.png);
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+}
+
+/*==============================================================*/
+
+#horz-top { position:absolute;
+	top:0px;
+	width:100%;
+	height:3px;
+	background-color:#000;
+}
+
+#horz-bottom { position:absolute;
+	bottom:0px;
+	width:100%;
+	height:3px;
+	background-color:#000;
+}
+
+#vert-left { position:absolute;
+	left:0px;
+	width:3px;
+	height:100%;
+	background-color:#000;
+}
+
+#vert-right { position:absolute;
+	right:0px;
+	width:3px;
+	height:100%;
+	background-color:#000;
+}

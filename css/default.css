@@ -1,0 +1,230 @@
+
+.test { background:url(default/test.png); }
+
+body {
+	font:15px normal Arial;
+	color:#FFF;
+}
+
+.logoMain { position:absolute;
+	top:14px; left:38px;
+}
+.logoMain:hover {
+	cursor: pointer;
+}
+.logoImage {
+	height:100px;
+}
+
+.splashImageBox {
+	width: 75%; height: 70%;
+	background-size: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("default/cplusplus.png");
+	opacity: 0.8;
+}
+.splashTitle {
+	font-size: 32pt;
+}
+
+/*==============================================================*/
+
+#mainTitle { position:absolute;
+	text-align:center;
+	font-size:40pt;
+	bottom:-4px; left:20px;
+	font-family:FedStarFleet;
+}
+#mainVersion { float:right;
+	height:41px;
+	margin-top:10px; margin-right:10px;
+	display: flex; justify-content: center; align-items: center;
+	background:rgba(0,0,0,1.0);
+	overflow:hidden;
+}
+#versionBox {
+	margin-right:10px; margin-bottom:-3px; margin-left:10px;
+	font-family:FedStarFleet;
+	font-size:30pt;
+}
+
+.mainForm { position:relative;
+	margin:5px; padding:0px;
+	border:1px solid #CCC; border-radius:8px;
+	background:rgba(65,120,155,0.75);
+	overflow:hidden;
+}
+
+.fields { float:left;
+	margin:3px; padding:3px 5px;
+	background:rgba(255,255,255,0.75);
+	border-radius:4px;
+	font-weight:bold; text-align:left; color:#000;
+	vertical-align:top;
+}
+.field {
+	border:0px; padding:3px 4px; border-radius:4px;
+	background:rgba(250,250,250,0.5);
+}
+.field:focus {
+	background:rgba(205,255,0,0.5);
+}
+
+.button {
+	margin:2px; padding:5px 10px;
+	border:1px solid #FFF; border-radius:20px;
+	background:rgba(80,80,80,0.75);
+	font-size:12pt; font-weight:bold;
+	text-decoration:none;
+	color:#FFF;
+}
+.button:hover {
+	border:1px solid #000;
+	background:rgba(204,255,0,0.75);
+	cursor:pointer;
+	text-decoration:none;
+	color:#000;
+}
+
+.siteBox { position:relative; float:left;
+	width:250px; height:54px;
+	margin:3px; padding:2px;
+	border:1px solid #BBB; border-top-right-radius:10px; border-bottom-right-radius:10px;
+	font-size:15pt;
+	overflow:hidden;
+	background:rgba(90,90,255,0.75);
+}
+.siteBox:hover {
+	background:rgba(150,150,255,1.0);
+	color:#000;
+}
+.siteIcon { position:absolute;
+	top:3px; left:22px;
+	width:50px; height:50px;
+	background:rgba(255,255,255,0.5);
+	background-size:100%;
+	background-position:center;
+	border:1px solid #000; border-radius:6px;
+	cursor:pointer;
+}
+.siteBoxCap { position:absolute;
+	top:2px; right:2px; bottom:2px; left:2px;
+	margin:0px 0px 0px 73px; padding:2px;
+	cursor:pointer;
+}
+.smallButton { position:absolute;
+	width:18px; height:18px;
+	left:2px;
+	font-size:10pt; font-weight:bold;
+	border-radius:4px;
+	color:#FFF;
+	background:rgba(10,10,10,0.75);
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-content:center;
+}
+.smallButton:hover {
+	background:rgba(255,255,255,0.75);
+	color:#000;
+	cursor:pointer;
+}
+
+.menu-head {
+	height:24px;
+	margin:0px 6px 3px 0px; padding:2px 2px 2px 5px;
+	font-size:15pt;
+	background-color:#FFB300;
+	border-top-left-radius:6px;
+	border-bottom-left-radius:6px;
+}
+.squareButton { position:relative;
+	width:180px; height:28px;
+	padding:0px;
+	overflow:hidden;
+	color:#FFF;
+	border-bottom:3px solid #000;
+}
+.squareCap { position:absolute;
+	width:10px; height:100%;
+	background:rgba(179,0,89,1.0);
+	border-right:2px solid #000;
+	border-top-left-radius:6px;
+	border-bottom-left-radius:6px;
+}
+.squareCap:hover {
+	background:rgba(255,0,128,1.0);
+	cursor:pointer;
+}
+.squareText { position:absolute;
+	right:0px; left:12px;
+	padding:2px 3px;
+	background:rgba(120,120,255,1.0);
+	font-size:15pt;
+}
+.squareText:hover {
+	background:rgba(155,155,255,1.0);
+	cursor:pointer;
+	color:#000;
+}
+
+.buttonAdd { position:absolute;
+	width:20px; height:20px;
+	background-image:url(default/add_btn.png);
+	background-position:center;
+	border-radius:6px; border:1px solid #FFF;
+}
+.buttonAdd:hover {
+	border:1px solid #F00;
+}
+
+.copyright {
+	width:auto;
+	font-size:8pt;
+	color:#555;
+}
+
+.pipGroupS {
+	padding:2px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border:2px solid rgb(230, 200, 40);
+	border-radius: 4px;
+	background:rgba(0, 0, 0, 0.5);
+}
+.pipGroupR {
+	padding:2px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border:1px solid rgb(230, 200, 40);
+	border-radius: 20px;
+	background:rgba(150, 150, 150, 0.5);
+}
+.pipGold {
+	width:25px; height:25px;
+	margin:2px;
+	border:2px solid rgb(230, 200, 40);
+	border-radius: 50%;
+	background: gold; /* For browsers that do not support gradients */
+  	background: -webkit-linear-gradient(left top, #cdb117, #FFFFEF, #dbbe22); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(bottom right, #cdb117, #FFFFEF, #dbbe22); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(bottom right, #cdb117, #FFFFEF, #dbbe22); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(to bottom right, #cdb117, #FFFFEF, #dbbe22); /* Standard syntax */
+}
+.pipBlack {
+	width:25px; height:25px;
+	margin:2px;
+	border:2px solid rgb(230, 200, 40);
+	border-radius: 50%;
+	background: black; /* For browsers that do not support gradients */
+  	background: -webkit-linear-gradient(left top, black, #888, black); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(bottom right, black, #888, black); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(bottom right, black, #888, black); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(to bottom right, black, #888, black); /* Standard syntax */
+}
