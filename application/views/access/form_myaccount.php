@@ -27,7 +27,7 @@ echo '<div style="overflow:auto; padding:0px 5px;">';
 
 echo '<input name="pathFile" type="hidden" value="'.$pathFile.'"/>';
 echo '<input name="preusername" type="hidden" value="'.$record['username'].'"/>';
-echo '<input name="prepassword" type="hidden" value="'.$record['password'].'"/>';
+echo '<input name="prepassword" type="hidden" value="'.trim($_SESSION['PassWord']).'"/>';
 
 for( $x=0; $x<count($fields); $x++ ){
 	echo '<div class="fields">';
@@ -51,8 +51,8 @@ for( $x=0; $x<count($fields); $x++ ){
 		case 'password':
 			echo ' class="field"';
 			//echo ' class="field-readonly"';
-			echo ' type="password"';
-			echo ' value="'.trim( $record[$fields[$x]] ).'"';
+			echo ' type="password"';//password
+			echo ' value="'.trim( $_SESSION['PassWord'] ).'"';
 			//echo ' readonly="readonly"';
 			break;
 		case 'email_address':
@@ -60,7 +60,7 @@ for( $x=0; $x<count($fields); $x++ ){
 				echo ' class="field"';
 				echo ' style=""';
 				echo ' type="text"';
-				echo ' value="'.trim( $record[$fields[$x]] ).'"';
+				echo ' value="'.$this->encrypt->decode(trim( $record[$fields[$x]] ),md5(trim($_SESSION['PassWord']))).'"';
 			} else {
 				echo ' class="field"';
 				echo ' style=""';
@@ -76,10 +76,17 @@ for( $x=0; $x<count($fields); $x++ ){
 			echo ' readonly="readonly"';
 			break;
 		default:
-			echo ' class="field"';
-			echo ' style=""';
-			echo ' type="text"';
-			echo ' value="'.trim( $record[$fields[$x]] ).'"';
+			if( isset($record[$fields[$x]]) && trim($fields[$x])!='' ){
+				echo ' class="field"';
+				echo ' style=""';
+				echo ' type="text"';
+				echo ' value="'.trim( $record[$fields[$x]] ).'"';
+			} else {
+				echo ' class="field"';
+				echo ' style=""';
+				echo ' type="text"';
+				echo ' value="'.'"';
+			}
 	}
 	echo '/>';
 	echo '</div>';

@@ -86,19 +86,26 @@ class Shared_model extends CI_Model {
 	}
 
 	// Usage: $this->shared_model->pathFiles2Array($path)
-	function pathFiles2Array($path) {
+	function pathFiles2Array($path,$type=null) {
 		$result = array();
 		if( $handle = opendir($path) ){
 			$x = 0;
 			while( ($file = readdir($handle))!==FALSE ){
-				if( !is_dir($path.$file) ) {
-					$result[$x] = trim($file);
-					$x++;
+				if( $file!='.' && $file!='..' && !is_dir($path.$file) ) {
+					if( $type ){
+						if( strstr($file,$type)!=FALSE ){
+							$result[$x] = trim($file);
+							$x++;
+						}
+					} else {
+						$result[$x] = trim($file);
+						$x++;
+					}
 				}
 			}
+			closedir($handle);
+			clearstatcache();
 		}
-		closedir($handle);
-		clearstatcache();
 		return $result;
 	}
 
