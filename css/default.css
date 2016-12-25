@@ -6,8 +6,15 @@ body {
 	color:#FFF;
 }
 
-.logoMain { position:absolute;
-	top:14px; left:38px;
+.logoMain {
+	width:130px; height:100px;
+	margin-top: 25%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(default/logo.png);
+	background-size: cover;
+	border-radius: 20px;
+	z-index: 100;
 }
 .logoMain:hover {
 	cursor: pointer;
@@ -18,10 +25,10 @@ body {
 
 .splashImageBox {
 	width: 75%; height: 70%;
-	background-size: auto;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url("default/cplusplus.png");
+	background-image: url("default/UFE.png");
+	background-size:contain;
 	opacity: 0.8;
 }
 .splashTitle {
@@ -35,12 +42,14 @@ body {
 	font-size:40pt;
 	bottom:-4px; left:20px;
 	font-family:FedStarFleet;
+	text-shadow: 4px 4px 4px #000;
 }
 #mainVersion { float:right;
 	height:41px;
 	margin-top:10px; margin-right:10px;
 	display: flex; justify-content: center; align-items: center;
-	background:rgba(0,0,0,1.0);
+	background:rgba(204,0,0,0.8);
+	border-radius: 10px;
 	overflow:hidden;
 }
 #versionBox {
@@ -50,9 +59,9 @@ body {
 }
 
 .mainForm { position:relative;
-	margin:5px; padding:0px;
+	margin:5px; padding:2px;
 	border:1px solid #CCC; border-radius:8px;
-	background:rgba(65,120,155,0.75);
+	background:rgba(204,0,0,0.75);
 	overflow:hidden;
 }
 
@@ -183,7 +192,7 @@ body {
 .copyright {
 	width:auto;
 	font-size:8pt;
-	color:#555;
+	color:#CCC;
 }
 
 .pipGroupS {
@@ -228,3 +237,12 @@ body {
   	background: -moz-linear-gradient(bottom right, black, #888, black); /* For Firefox 3.6 to 15 */
   	background: linear-gradient(to bottom right, black, #888, black); /* Standard syntax */
 }
+
+.loadspeed { float:right;
+	margin:10px 20px 0px 0px;
+	font-size:8pt;
+	color:#888;
+}
+
+
+/* EoF */
