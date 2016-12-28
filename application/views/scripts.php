@@ -1,5 +1,7 @@
 <?php
 
+echo '<script src="'.$basePath.'js/bootstrap.min.js"></script>';
+
 echo '<script type="text/javascript">
 $(document).ready( function() {
 	$("div").click(function(event) {

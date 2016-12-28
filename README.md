@@ -7,3 +7,6 @@ This will be a Web based Secure Voting System created by The People for The Peop
 
 Progress:
 * Main structure created, login function and base theme.
+
+Working:
+* ballot and dynamic fillins

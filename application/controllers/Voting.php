@@ -33,6 +33,20 @@ class Voting extends CI_Controller {
 		$this->loadView($data);
 	}
 
+	public function topic($topic) {
+		//$data['variables'] 	= "start/variables";
+		$data['head'] 		= 'head';
+		//$data['processing'] = "start/processing";
+		$data['topic'] = $topic;
+		$data['body'] 		= 'voting/body';
+		$data['scripts'] 		= 'scripts';
+		$this->loadView($data);
+	}
+
+	public function vote() {
+		$this->shared_model->outputArray($_POST);
+	}
+
 	//
 
 }

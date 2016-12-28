@@ -118,7 +118,7 @@ echo form_close();
 
 
 
-
+$this->shared_model->outputArray($_SESSION); // FOR TESTING !
 echo '</div>';
 //=====================================================================================
 echo '</div>';
