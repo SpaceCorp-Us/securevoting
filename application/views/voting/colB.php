@@ -8,7 +8,7 @@ echo '<div class="centerTopColumn" style="position:relative; width:100%; height:
 // get ballot fields
 $dataPath = '.ballots/';
 $filesAry = array();
-$this->shared_model->getFilesR($filesAry,$dataPath.$topic.'/','.html');
+$this->shared_model->getFilesR($filesAry,$dataPath.$topic.'/','.php');
 
 //$this->shared_model->outputArray($filesAry); // FOR TESTING !
 
@@ -35,6 +35,7 @@ echo '</div>';
 echo '<div id="formFooter" class="formFootV" style="">';
 echo '<div id="total" style="float:left; margin:3px;"></div>';
 echo '<input class="button formButton" style="" type="submit" value="SUBMIT"/>';
+echo '<button id="legend" class="button formButton" type="button">Legend</button>';
 echo '</div>';
 echo '</form>';
 
@@ -52,6 +53,7 @@ var $numItems = $(".section").length;
 var $total = 0;
 var $fields = [];
 $(document).ready( function() {
+
    $(".field").change( function() {
       var $curName = $(this).attr("name");
       if( $fields[$curName] != "set" ){
@@ -60,7 +62,14 @@ $(document).ready( function() {
          getTotal($n);
       }
    });
+
+   $("#legend").click(function(){
+      $("#rowCcolC").empty();
+      $("#rowCcolC").load("'.$basePath.'.data/legend.html");
+   });
+
 });
+
 var getTotal = function($n) {
    if( $n!="" ){
       $total += 1;
@@ -75,6 +84,7 @@ var getTotal = function($n) {
       }
    }
 }
+
 </script>';
 
 
