@@ -1,6 +1,6 @@
 <?php
 
-echo '<div id="rowCcolC" class="colC">';
+echo '<div id="rowCcolC" class="colC" style="margin:0px;">';
 //=====================================================================================
 
 //echo '<div class="">MENU RIGHT</div>';

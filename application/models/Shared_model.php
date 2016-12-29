@@ -85,29 +85,77 @@ class Shared_model extends CI_Model {
 		return $imagesPath.$image;
 	}
 
-	// Usage: $this->shared_model->pathFiles2Array($path)
-	function pathFiles2Array($path) {
+	// Usage: $this->shared_model->pathFiles2Array($path,$type=null)
+	function pathFiles2Array($path,$type=null) {
 		$result = array();
 		if( $handle = opendir($path) ){
 			$x = 0;
 			while( ($file = readdir($handle))!==FALSE ){
-				if( !is_dir($path.$file) ) {
-					$result[$x] = trim($file);
-					$x++;
+				if( $file!='.' && $file!='..' && !is_dir($path.$file) ) {
+					if( $type ){
+						if( strstr($file,$type)!=FALSE ){
+							$result[$x] = trim($file);
+							$x++;
+						}
+					} else {
+						$result[$x] = trim($file);
+						$x++;
+					}
 				}
 			}
+			closedir($handle);
+			clearstatcache();
 		}
-		closedir($handle);
-		clearstatcache();
 		return $result;
+	}
+
+	// Usage: $this->shared_model->getFilesR($ary,$path,'.xml')
+	function getFilesR(&$ary,$path,$filter='.json'){
+		global $x;
+		if( $handle=opendir($path) ){
+			$x = count($ary);
+			while( ($file = readdir($handle))!== FALSE ){
+				if( $file!='.' && $file!='..' ){
+					//=========================================================
+					$tempDir = $path.$file;
+					if( stristr($file,$filter)!==FALSE && is_file($tempDir) ){
+						$pathParts = explode('/',substr(trim($path),0,-1));
+						$ary[end($pathParts)][$x]['fileName']=trim($file);
+						$ary[end($pathParts)][$x]['filePath']=trim($path);
+						$ary[end($pathParts)][$x]['pathFile']=trim($tempDir);
+						$x++;
+					} else if( is_dir($tempDir) ){
+						$this->getFilesR($ary,$tempDir.'/',$filter);
+					}
+					//=========================================================
+				}
+			}
+			closedir($handle);
+			clearstatcache();
+			//sort($ary, SORT_REGULAR);
+		} else {
+			return FALSE;
+		}
 	}
 
 	//==============================================================================
 
+	// Usage: $this->shared_model->getVarName($var)
+	public function getVarName($var) {
+	   foreach($GLOBALS as $var_name => $value) {
+	      if ($value === $var) {
+	         return '$'.$var_name;
+	      }
+	   }
+		return FALSE;
+	}
+
 	// Usage: $this->shared_model->outputArray($ary)
 	public function outputArray($ary){
-		echo '<pre style="float:left; background:rgba(50,50,50,0.75); text-align:left; margin:5px;
-			padding:5px 10px; color:#CF0; border-radius:6px;">';
+		echo '<pre style="float:left; background:rgba(50,50,50,0.75); text-align:left; margin:5px 5px;
+			padding:8px 10px; color:#CF0; border-radius:6px;">';
+		echo '<div style="clear:both;">Diagnostic Output - '.$this->getVarName($ary).'</div>';
+		echo '<hr>';
 		print_r($ary);
 		echo '</pre>';
 	}

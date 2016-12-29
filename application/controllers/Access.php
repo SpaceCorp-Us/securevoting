@@ -53,6 +53,7 @@ class Access extends CI_Controller {
 		if( $this->form_validation->run() ){
 			$data = array(
 				'UserName' => trim($this->input->post('UserName')),
+				'PassWord' => trim($this->input->post('PassWord')),
 				'Logged_In' => TRUE
 			);
 			$this->session->set_userdata($data);
@@ -110,7 +111,13 @@ class Access extends CI_Controller {
 		unset($_POST['preusername']);
 		//
 		if( trim($_POST['password'])!=trim($_POST['prepassword']) ){
+			$_SESSION['PassWord'] = trim($_POST['password']);
 			$_POST['password'] = $this->access_model->makePassword(trim($_POST['password']));
+		} else {
+			$_POST['password'] = $this->access_model->makePassword(trim($_SESSION['PassWord']));
+		}
+		if( isset($_POST['email_address']) && trim($_POST['email_address'])!='' ){
+			$_POST['email_address'] = $this->encrypt->encode(trim($_POST['email_address']),md5(trim($_SESSION['PassWord'])));
 		}
 		unset($_POST['prepassword']);
 		//

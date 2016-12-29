@@ -6,19 +6,6 @@ class Access_model extends CI_Model {
 		parent::__construct();
 	}
 
-// 	function update_password($id,$new_password){
-// 		$data = array(
-// 			'PassWord' => $new_password
-// 		);
-// 		$this->db->where('user_ID', $id);
-// 		$update = $this->db->update('users', $data);
-// 		if( $update ){
-// 			return true;
-// 		} else {
-// 			return false;
-// 		}
-// 	}
-
 	// Usage: $this->access_model->makePassword($text)
 	public function makePassword($text){
 		$options = $this->config->item('pwCost');

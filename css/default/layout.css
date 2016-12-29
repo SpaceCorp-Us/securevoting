@@ -37,6 +37,9 @@ body {
 .centerCenterColumn {
 	display: flex; flex-direction: column; justify-content: center; align-items: center;
 }
+.centerTopColumn {
+	display:flex; flex-direction:column; justify-content:flex-start; align-items:center;
+}
 
 /*============================================================================*/
 
@@ -134,9 +137,10 @@ div {
 #rowCcolA {
 	background-image:url(rowCcolA.png);
 	display:flex;
-	flex-direction:row;
+	flex-direction:column;
 	flex-wrap:wrap;
-	justify-content:center;
+	justify-content:flex-start;
+	align-items: center;
 }
 #rowCcolB {
 	height:100%;

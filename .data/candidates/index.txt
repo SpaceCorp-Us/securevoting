@@ -1,0 +1,27 @@
+000
+100   George Washington
+200   Thomas Jefferson
+300   Abraham Lincoln
+400   Dwight D. Eisenhower
+500   John F. Kennedy
+510   Richard Nixon
+550
+555   Maverick M. Constantine
+560
+570   Mark R. Herring
+580   Mark D. Obenshain
+590
+600   Donald J. Trump
+650   Mike R. Pence
+666   Hillary D, Clinton
+670   Joseph R. Biden
+700
+710   Terry R. McAuliffe
+720   Ken T. Cuccinelli
+730   Robert C. Sarvis
+740
+750   George W. Bush
+777   Ken A. Haas
+999   Lyndon B. Johnson
+
+1000  Jill E. Stein

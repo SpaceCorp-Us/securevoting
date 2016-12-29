@@ -1,8 +1,12 @@
 # securevoting
-Secure Voting System 2015
+Secure Voting System 2015 (project started late 2016)
 
-(WIP)
+Work In Progress (WIP)
 
-This will be a Web based Secure Voting SYstem created by The People for The People.
+This will be a Web based Secure Voting System created by The People for The People.
 
-# EoF
+Progress:
+* Main structure created, login function and base theme.
+
+Working:
+* ballot and dynamic fillins
