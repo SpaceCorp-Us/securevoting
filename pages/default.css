@@ -1,0 +1,35 @@
+html {
+   width:100%; height:100%;
+   margin:0px; padding:0px;
+}
+body {
+   background:rgba(0,0,0,0.25);
+}
+
+table {
+   background:rgba(255,255,255,1.0);
+}
+
+.lightShade {
+   background:rgba(240,240,250,0.5);
+}
+
+.parties {
+   width:130px;
+   padding:3px;
+   color:#0044cc;
+}
+
+.issues {
+   padding:4px 8px;
+   text-align: right;
+   color:#800000;
+}
+
+.redBG {
+   background:rgba(255, 128, 128, 0.75);
+}
+
+.greenBG {
+   background:rgba(100, 255, 100, 0.75);
+}
