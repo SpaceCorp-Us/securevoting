@@ -9,4 +9,8 @@ Progress:
 * Main structure created, login function and base theme.
 
 Working:
+<<<<<<< HEAD
 * ballot and dynamic fillins
+=======
+* ballot and dynamic fillins 
+>>>>>>> d97b454898b7accba033a411b19b4ec4d5a70b34
