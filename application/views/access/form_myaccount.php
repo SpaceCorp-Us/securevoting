@@ -117,8 +117,9 @@ echo '</div>';
 echo form_close();
 
 
-
-$this->shared_model->outputArray($_SESSION); // FOR TESTING !
+if( $record['status']=='ADMIN' ){
+	$this->shared_model->outputArray($_SESSION); // FOR TESTING !
+}
 echo '</div>';
 //=====================================================================================
 echo '</div>';
