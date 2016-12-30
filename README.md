@@ -11,8 +11,8 @@ Progress:
 Working:
 * ballot and dynamic fillins
 
-=== User Accounts ===
-Admin : adminpassword
-Trustee : trusteepassword
-User : userpassword
-=====================
+====== User Accounts ========
+* Admin : adminpassword
+* Trustee : trusteepassword
+* User : userpassword
+=============================
