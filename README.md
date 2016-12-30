@@ -19,10 +19,13 @@ Working:
 
 <<<<<<< HEAD
 === User Accounts ===
-Admin : adminpassword
-Trustee : trusteepassword
-User : userpassword
+
+* Admin : adminpassword
+* Trustee : trusteepassword
+* User : userpassword
+
 =====================
+
 >>>>>>> development
 =======
 ====== User Accounts ========
