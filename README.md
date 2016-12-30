@@ -17,9 +17,17 @@ Working:
 >>>>>>> d97b454898b7accba033a411b19b4ec4d5a70b34
 =======
 
+<<<<<<< HEAD
 === User Accounts ===
 Admin : adminpassword
 Trustee : trusteepassword
 User : userpassword
 =====================
+>>>>>>> development
+=======
+====== User Accounts ========
+* Admin : adminpassword
+* Trustee : trusteepassword
+* User : userpassword
+=============================
 >>>>>>> development

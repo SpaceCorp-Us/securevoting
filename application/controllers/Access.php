@@ -123,16 +123,18 @@ class Access extends CI_Controller {
 		//
 		$json = json_encode($_POST,JSON_PRETTY_PRINT);
 		//echo $json; exit(); // FOR TESTING !
+		chown($pathFile,'apache');
+		chgrp($pathFile,48);
+		chmod($pathFile,0775);
 		$fObj = fopen($pathFile,'w');
 		fwrite($fObj,$json);
 		fclose($fObj);
-		chmod($pathFile, 0775);
 		//
 		if( $rename ){
 			// rename file
 			$newPathFile = trim($this->config->item('usersDir').$newFileName);
 			if( !copy($pathFile,$newPathFile) ){
-				$this->session->set_flashdata('validation', 'Unable to Comply, Please contact Support...' );
+				$this->session->set_flashdata('validation','Unable to Comply, Please contact Support...' );
 				redirect('access/myaccount');
 			} else {
 				chmod($newPathFile, 0775);

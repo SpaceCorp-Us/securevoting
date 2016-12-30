@@ -41,7 +41,7 @@ echo '</tr>';
 // output issues
 for($i=0;$i<$issueCount;$i++){
    echo '<tr align="center" valign="middle" class="" style="">';
-   echo '<td class="issues">';
+   echo '<td class="issues" title="'.$i.'">';
    //echo '<div style="float:left;">'.$i.'</div>';
    echo file_get_contents($issues[$i]['pathFile']).'</td>';
    for($p=0;$p<$partyCount;$p++){
